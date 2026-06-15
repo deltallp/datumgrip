@@ -43,6 +43,16 @@ nav a:hover, nav a.active {
     color: #cc0000; 
 }
 
+.nav-left {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.nav-right {
+    flex: 1;
+    justify-content: flex-end;
+}
+
 /* Forcing single column layout by restricting width and centering */
 main {
     max-width: 800px;
