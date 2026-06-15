@@ -1,0 +1,88 @@
+/* Maintaining exact shared styles for consistency */
+body { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; background-color: #ffffff; color: #000000; line-height: 1.6; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 25px 50px; border-bottom: 2px solid #000000; background-color: #ffffff; }
+.logo { font-size: 28px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
+nav { display: flex; gap: 30px; }
+nav a { text-decoration: none; color: #000000; font-weight: bold; font-size: 14px; text-transform: uppercase; transition: color 0.3s ease; }
+nav a:hover, nav a.active { color: #cc0000; }
+main { max-width: 800px; margin: 60px auto; padding: 0 20px; display: block; }
+h1 { font-size: 36px; border-bottom: 3px solid #000000; padding-bottom: 10px; margin-bottom: 40px; text-transform: uppercase; }
+h2 { font-size: 20px; margin-top: 0; margin-bottom: 10px; }
+p, li { font-size: 16px; margin-bottom: 15px; }
+
+footer { text-align: center; padding: 40px; border-top: 2px solid #000000; margin-top: 80px; font-size: 14px; font-weight: bold; }
+
+/* Page Specific Styles */
+.contact-details {
+    display: block;
+    margin-bottom: 50px;
+    padding: 30px;
+    border: 1px solid #000000;
+    background-color: #fafafa;
+}
+
+.detail-block {
+    margin-bottom: 25px;
+}
+
+.detail-block a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.detail-block a:hover {
+    color: #cc0000;
+}
+
+.inquiry-container {
+    border-top: 2px solid #000000;
+    padding-top: 40px;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* Red used sparingly for absolute primary action */
+.submit-btn {
+    background-color: #cc0000; 
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+}

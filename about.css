@@ -1,0 +1,101 @@
+/* Base styling ensuring Black & White primary palette */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    border-bottom: 2px solid #000000;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+/* Red used sparingly for active state */
+nav a:hover, nav a.active {
+    color: #cc0000; 
+}
+
+/* Forcing single column layout by restricting width and centering */
+main {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: block; 
+}
+
+h1 {
+    font-size: 36px;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+h2 { font-size: 24px; margin-top: 40px; }
+h3 { font-size: 20px; margin-top: 30px; text-decoration: underline; }
+p, li { font-size: 16px; margin-bottom: 15px; }
+ul { margin-bottom: 25px; }
+
+/* Red used sparingly for absolute highlights */
+.highlight {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.founder-card {
+    border: 1px solid #000000;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #fafafa;
+}
+
+.linkedin-link {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+}
+
+.linkedin-link:hover {
+    color: #cc0000;
+    border-color: #cc0000;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 2px solid #000000;
+    margin-top: 80px;
+    font-size: 14px;
+    font-weight: bold;
+}
