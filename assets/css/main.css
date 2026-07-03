@@ -3437,3 +3437,30 @@ section,
 .about .vision-mission-box .section-heading {
   margin-bottom: 1rem;
 }
+
+.how-we-work .step-image .step-slider,
+.how-we-work .step-image .swiper,
+.how-we-work .step-image .swiper-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.how-we-work .step-info {
+    min-width: 0;
+}
+
+.how-we-work .step-text {
+    min-width: 0;
+}
+
+.how-we-work .step-image {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.how-we-work .step-image img {
+    width: 100%;
+    display: block;
+}
