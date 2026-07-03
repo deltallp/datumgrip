@@ -3324,7 +3324,7 @@ section,
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1rem;
   padding: 1.5rem 0.75rem 0.6rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
   color: #fff;
