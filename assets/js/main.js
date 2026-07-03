@@ -87,11 +87,6 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
    * Frequently Asked Questions Toggle
    */
   document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {

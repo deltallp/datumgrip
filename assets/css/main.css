@@ -16,6 +16,7 @@
   --accent-color: #E52D35; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --swiper-theme-color: #E52D35; /* Swiper navigation arrows and pagination bullets use the brand accent color instead of the default blue */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -3234,4 +3235,205 @@ section,
   height: 380px;
   object-fit: cover;
   display: block;
+}
+
+/* Placeholder for images that are pending / to be provided */
+.image-placeholder {
+  width: 100%;
+  height: 380px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: color-mix(in srgb, var(--accent-color), transparent 94%);
+  border: 2px dashed color-mix(in srgb, var(--accent-color), transparent 70%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.image-placeholder i {
+  font-size: 3rem;
+  color: color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.image-placeholder span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Shared Swiper navigation arrows (same red circle style as the home hero slider) */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 45px;
+  height: 45px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  color: var(--contrast-color);
+  transition: 0.3s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
+  transform: scale(1.1);
+}
+
+/* Slightly smaller arrows for the compact card / step sliders */
+.industry-slider .swiper-button-next,
+.industry-slider .swiper-button-prev,
+.step-slider .swiper-button-next,
+.step-slider .swiper-button-prev {
+  width: 34px;
+  height: 34px;
+}
+
+.industry-slider .swiper-button-next::after,
+.industry-slider .swiper-button-prev::after,
+.step-slider .swiper-button-next::after,
+.step-slider .swiper-button-prev::after {
+  font-size: 13px;
+}
+
+/* Industries "We Serve" image sliders (with product name captions) */
+.about .feature-box .industry-slider {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.about .feature-box .industry-slide {
+  position: relative;
+}
+
+.about .feature-box .industry-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.about .feature-box .industry-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 0.75rem 0.6rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.about .feature-box .industry-slider .swiper-pagination {
+  bottom: 6px;
+}
+
+.about .feature-box .industry-slider .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.7;
+  width: 8px;
+  height: 8px;
+}
+
+.about .feature-box .industry-slider .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Fixture Construction: step images / mini-slider inside each step card */
+.how-we-work .step-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.how-we-work .step-image {
+  flex-shrink: 0;
+  width: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.how-we-work .step-image img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.how-we-work .step-image .step-slider {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.how-we-work .step-image .step-slider .swiper-pagination {
+  bottom: 6px;
+}
+
+.how-we-work .step-image .step-slider .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.7;
+  width: 8px;
+  height: 8px;
+}
+
+.how-we-work .step-image .step-slider .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.how-we-work .step-text {
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .how-we-work .step-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .how-we-work .step-image {
+    width: 100%;
+  }
+}
+
+/* About page: separate Vision & Mission boxes */
+.about .vision-mission-box {
+  background: var(--surface-color);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.about .vision-mission-box:hover {
+  transform: translateY(-6px);
+}
+
+.about .vision-mission-box .icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.about .vision-mission-box .section-heading {
+  margin-bottom: 1rem;
 }
