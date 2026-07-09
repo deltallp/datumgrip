@@ -155,3 +155,46 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const loading = contactForm.querySelector(".loading");
+    const errorMessage = contactForm.querySelector(".error-message");
+    const sentMessage = contactForm.querySelector(".sent-message");
+
+    loading.style.display = "block";
+    errorMessage.style.display = "none";
+    sentMessage.style.display = "none";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      loading.style.display = "none";
+
+      if (response.ok) {
+        sentMessage.style.display = "block";
+        contactForm.reset();
+      } else {
+        errorMessage.innerHTML =
+          "Failed to send message. Please try again.";
+        errorMessage.style.display = "block";
+      }
+    } catch (error) {
+      loading.style.display = "none";
+      errorMessage.innerHTML =
+        "Network error. Please try again later.";
+      errorMessage.style.display = "block";
+    }
+  });
+}

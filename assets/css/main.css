@@ -3449,3 +3449,8 @@ section,
 .about .vision-mission-box .section-heading {
   margin-bottom: 1rem;
 }
+.loading,
+.error-message,
+.sent-message {
+  display: none;
+}
